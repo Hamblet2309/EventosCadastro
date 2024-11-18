@@ -1,0 +1,33 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CadastroEventos.Views.ResumoPage"
+             Title="Resumo do Evento">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20" Spacing="15">
+                <Label Text="Resumo do Evento" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+
+                <Label Text="Nome:" FontAttributes="Bold" />
+                <Label Text="{Binding Nome}" />
+
+                <Label Text="Local:" FontAttributes="Bold" />
+                <Label Text="{Binding Local}" />
+
+                <Label Text="Data de Início:" FontAttributes="Bold" />
+                <Label Text="{Binding DataInicio, StringFormat='{}{0:dd/MM/yyyy}'}" />
+
+                <Label Text="Data de Término:" FontAttributes="Bold" />
+                <Label Text="{Binding DataTermino, StringFormat='{}{0:dd/MM/yyyy}'}" />
+
+                <Label Text="Duração (em dias):" FontAttributes="Bold" />
+                <Label Text="{Binding DuracaoEmDias}" />
+
+                <Label Text="Número de Participantes:" FontAttributes="Bold" />
+                <Label Text="{Binding NumeroParticipantes}" />
+
+                <Label Text="Custo Total:" FontAttributes="Bold" />
+                <Label Text="{Binding CustoTotal, StringFormat='R$ {0:N2}'}" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
